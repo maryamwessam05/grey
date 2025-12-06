@@ -10,6 +10,8 @@ body{
     align-items: center;
     background-color: black;
     width: 1280px;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 header{
@@ -84,4 +86,41 @@ text-decoration-skip-ink: auto;
 text-decoration-thickness: auto;
 text-underline-offset: 58%; /* 9.28px */
 text-underline-position: from-font;
+}
+
+.hero{
+    display: flex;
+width: 1280px;
+padding: 27px 0;
+flex-direction: column;
+align-items: flex-start;
+}
+
+.heroimg{
+    display: flex;
+flex-direction: column;
+align-items: center;
+align-self: stretch;
+}
+
+.knowbtn{
+    display: flex;
+padding: 13px 191px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: 1px solid #FFF;
+color: #FFF;
+font-family: Antonio;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+transition: all 300ms ease;
+cursor: pointer;
+}
+
+.knowbtn:hover{
+    scale: 1.1;
+box-shadow: 0 4px 0 0 #FFF;
 }
