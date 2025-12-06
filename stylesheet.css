@@ -1,0 +1,87 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 1280px;
+}
+
+header{
+display: flex;
+width: 1280px;
+padding: 30px 27px;
+align-items: center;
+gap: 299px;
+
+}
+
+ul{
+    list-style: none;
+    display: flex;
+align-items: center;
+gap: 35px;
+}
+a{
+    text-decoration: none;
+    color: #FFF;
+text-align: center;
+font-family: Montserrat;
+font-size: 16px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+transition: all 300ms ease;
+}
+
+.selected{
+
+font-weight: 700;
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: 58%; /* 9.28px */
+text-underline-position: from-font;
+}
+
+.contactbtn{
+    display: flex;
+width: 138px;
+padding: 13px 14px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+flex-shrink: 0;
+border-radius: 37px;
+background: #53AABB;
+color: #FFF;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+transition: all 300ms ease;
+cursor: pointer;
+}
+
+.contactbtn:hover{
+    scale: 1.1;
+    box-shadow: 0 4px 0 0 #FFF;
+}
+
+li:hover a{
+line-height: normal;
+text-decoration-line: underline;
+text-decoration-style: solid;
+text-decoration-skip-ink: auto;
+text-decoration-thickness: auto;
+text-underline-offset: 58%; /* 9.28px */
+text-underline-position: from-font;
+}
