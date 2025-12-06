@@ -11,7 +11,7 @@ body{
     background-color: black;
     width: 1280px;
     flex-direction: column;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 header{
@@ -123,4 +123,7 @@ cursor: pointer;
 .knowbtn:hover{
     scale: 1.1;
 box-shadow: 0 4px 0 0 #FFF;
+}
+.banner{
+    margin-top: -15px;
 }
