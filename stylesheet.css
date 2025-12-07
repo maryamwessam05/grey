@@ -490,3 +490,136 @@ footer a:hover{
     transform: rotate(-24deg);}
 
 
+.character{
+    display: inline-flex;
+    width: 1159px;
+    height: 688px;
+    padding: 69px 156px 129px 73px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 43px;
+    background-image: url(img/Group\ 4.png);
+    margin-bottom: 70px;
+}
+
+.row1{
+    display: flex;
+    /* width: 63px; */
+    align-items: center;
+    gap: 383px;
+}
+
+.row1 h3{
+    color: #868686;
+font-family: "Anton SC";
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.row2{
+    display: flex;
+align-items: center;
+gap: 27px;
+align-self: stretch;
+}
+
+.watch{
+    display: flex;
+padding: 13px 58px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+align-self: stretch;
+border: 1px solid #FFF;
+background: #000;
+color: #FFF;
+font-family: Antonio;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+transition: all 300ms ease;
+cursor: pointer;
+}
+
+.watch:hover{
+    scale: 1.1;
+}
+
+.text{
+    display: flex;
+align-items: flex-start;
+gap: 27px;
+align-self: stretch;
+position: relative;
+flex-direction: column;
+width: 592px;
+
+}
+
+.pair{
+    display: flex;
+align-items: flex-start;
+flex-direction: column;
+}
+
+.pair h3{
+    color: #413838;
+font-family: "Anton SC";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.pair h4{
+    color: #413838;
+font-family: Antonio;
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.pair p{
+    color: #413838;
+font-family: Montserrat;
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.sticky{
+    display: flex;
+width: 228px;
+height: 227.109px;
+padding: 30.281px 21.375px;
+flex-direction: column;
+align-items: flex-start;
+gap: 8.906px;
+position: absolute;
+right: 0;
+top: 0;
+background-image: url(img/Frame\ 81.png);
+}
+
+.sticky h3{
+    color: #413838;
+font-family: "Anton SC";
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.sticky h5{
+    color: #413838;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: 145.549%; /* 18.921px */
+}
