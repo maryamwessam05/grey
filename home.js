@@ -82,7 +82,7 @@ let castlist = document.querySelector(".castlist");
 
 for (let i = 0; i < cast.length; i++) {
     castlist.innerHTML += `
-        <div class="card" style="transform: rotate(${cast[i].rotate});">
+<div class="card" onclick="openCast(${i})" style="transform: rotate(${cast[i].rotate});">
             <div class="cardcont">
                 <img src="img/logo.png" alt="" class="logo">
                 <img src="${cast[i].img}" alt="${cast[i].name}">
@@ -96,6 +96,10 @@ for (let i = 0; i < cast.length; i++) {
 }
 
 
+function openCast(index) {
+    localStorage.setItem("selectedCast", index);
+    window.location.href = "char.html";
+}
 
 document.getElementById("footer").innerHTML +=
 `
@@ -143,3 +147,7 @@ document.getElementById("footer").innerHTML +=
 
 
 `;
+
+
+
+

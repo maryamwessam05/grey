@@ -1,3 +1,53 @@
+let index = localStorage.getItem("selectedCast");
+let chosenCast = characters[index];
+
+
+document.getElementById("character").innerHTML = `
+
+    <div class="row1">
+        <h3>Character Info Chart</h3>
+        <img src="img/logos.png" alt="">
+    </div>
+
+    <div class="row2">
+        <div class="image">
+            <img src="${chosenCast.image}" alt="${chosenCast.name}">
+            <div class="watch">WATCH NOW</div>
+        </div>
+
+        <div class="text">
+
+            <div class="pair">
+                <h3>Character Name</h3>
+                <h4>${chosenCast.name}</h4>
+            </div>
+
+            <div class="pair">
+                <h3>Actor</h3>
+                <h4>${chosenCast.actor}</h4>
+            </div>
+
+            <div class="pair">
+                <h3>Bio</h3>
+                <p>${chosenCast.bio}</p>
+            </div>
+
+            <div class="sticky">
+                <h3>Special Traits</h3>
+                <h5>
+                    ${chosenCast.traits.map(t => `- ${t}`).join("<br>")}
+                </h5>
+            </div>
+
+        </div>
+    </div>
+
+`;
+
+
+
+
+
 document.getElementById("footer").innerHTML +=
 `
  <div class="footcontent">
