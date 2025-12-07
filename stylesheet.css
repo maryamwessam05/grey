@@ -365,3 +365,13 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.castlist{
+    display: flex;
+justify-content: center;
+align-items: center;
+align-content: center;
+gap: 63px 82px;
+align-self: stretch;
+flex-wrap: wrap;
+}

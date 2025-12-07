@@ -36,3 +36,61 @@ for (let i = 0; i < seasons.length; i++) {
         </div>
     `;
 }
+
+
+let cast = [
+    {
+        name: "Meredith Grey, M.D.",
+        title: "General Surgeon",
+        img: "img/mer.png",
+        rotate: "-7.253deg"
+    },
+    {
+        name: "Izzie Stevens, M.D.",
+        title: "Surgical Resident",
+        img: "img/izz.png",
+        rotate: "6.74deg"
+    },
+    {
+        name: "George O’malley, M.D.",
+        title: "Surgical Resident",
+        img: "img/geo.png",
+        rotate: "-6.534deg"
+    },
+    {
+        name: "Mark Sloan, M.D.",
+        title: "Head of plastic surgery",
+        img: "img/mar.png",
+        rotate: "5.671deg"
+    },
+    {
+        name: "Cristina Yang, M.D.",
+        title: "Chief Medical Officer",
+        img: "img/yang.png",
+        rotate: "-8.518deg"
+    },
+    {
+        name: "Derek Shepherd, M.D.",
+        title: "Neurosurgeon",
+        img: "img/shep.png",
+        rotate: "8.209deg"
+    }
+];
+
+
+let castlist = document.querySelector(".castlist");
+
+for (let i = 0; i < cast.length; i++) {
+    castlist.innerHTML += `
+        <div class="card" style="transform: rotate(${cast[i].rotate});">
+            <div class="cardcont">
+                <img src="img/logo.png" alt="" class="logo">
+                <img src="${cast[i].img}" alt="${cast[i].name}">
+                <div class="name">
+                    <h5>${cast[i].name}</h5>
+                    <h6>${cast[i].title}</h6>
+                </div>
+            </div>
+        </div>
+    `;
+}
