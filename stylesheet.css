@@ -160,3 +160,57 @@ font-style: normal;
 font-weight: 400;
 line-height: normal;
 }
+
+.aboutcont{
+    display: flex;
+align-items: center;
+}
+
+.abtxt{
+    display: flex;
+width: 629px;
+flex-direction: column;
+align-items: flex-start;
+gap: 43px;
+}
+
+.abtxt p{
+    color: #FFF;
+font-family: "Roboto Condensed";
+font-size: 30px;
+font-style: normal;
+font-weight: 200;
+line-height: normal;
+}
+
+.readbtn{
+    display: flex;
+padding: 13px 69px;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border: 1px solid #FFF;
+background: #000;
+color: #FFF;
+font-family: Antonio;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+transition: all 300ms ease;
+cursor: pointer;
+}
+
+.readbtn:hover{
+        scale: 1.1;
+    box-shadow: 0 4px 0 0 #FFF;
+
+}
+
+.aboutcont img{
+    transition: all 300ms ease;
+}
+
+.aboutcont:hover img{
+    transform: rotate(-10deg);
+}
