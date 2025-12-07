@@ -146,7 +146,6 @@ box-shadow: 0 4px 0 0 #FFF;
     align-self: stretch;
 }
 
-.sectitle {}
 
 .line{
     width: 27%;
@@ -233,6 +232,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .seasonslist{
@@ -452,3 +452,41 @@ line-height: 24px; /* 150% */
 footer a:hover{
     text-decoration: underline;
 }
+
+.gif1{
+    position: absolute;
+    top: 23%;
+    left: -47px;
+}
+
+.gif2{
+    position: absolute;
+    top: 39%;
+    right: -47px;
+}
+
+.gif3{
+        position: absolute;
+    top: 63%;
+    scale: 2;
+}
+
+.gif4{
+    position: absolute;
+    top: 71%;
+    right: 0;
+    z-index: -99;
+    opacity: 0.3;
+    scale: 2;
+    transform: rotate(68deg);}
+
+.gif5{
+ position: absolute;
+    top: 87%;
+    left: 0;
+    z-index: -99;
+    opacity: 0.3;
+    scale: 3;
+    transform: rotate(-24deg);}
+
+
