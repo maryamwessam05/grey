@@ -131,18 +131,22 @@ box-shadow: 0 4px 0 0 #FFF;
 
 .about{
     display: flex;
-flex-direction: column;
-align-items: center;
-gap: 61px;
+    flex-direction: column;
+    align-items: center;
+    gap: 61px;
+    width: 100%;
 }
 
 .sectitle{
     display: flex;
-justify-content: center;
-align-items: center;
-gap: 31px;
-align-self: stretch;
+    justify-content: center;
+    align-items: center;
+    gap: 31px;
+    width: 100%;
+    align-self: stretch;
 }
+
+.sectitle {}
 
 .line{
     width: 27%;
@@ -153,12 +157,13 @@ background: #FFF;
 
 .sectitle h1{
     color: #FFF;
-text-align: center;
-font-family: "Anton SC";
-font-size: 84.053px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
+    text-align: center;
+    font-family: "Anton SC";
+    font-size: 84.053px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    width: 42%;
 }
 
 .aboutcont{
@@ -213,4 +218,73 @@ cursor: pointer;
 
 .aboutcont:hover img{
     transform: rotate(-10deg);
+}
+
+.seasons{
+    display: flex;
+    width: 100%;
+    padding: 53px 0;
+    flex-direction: column;
+    align-items: center;
+    gap: 101px;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seasonslist{
+    display: flex;
+width: 1160px;
+align-items: flex-start;
+gap: 31.953px;
+flex-wrap: wrap;
+}
+
+.seasontab{
+    display: flex;
+    padding: 16.27px 23.08px;
+    align-items: center;
+    gap: 45.509px;
+    border: 0.908px solid #FFF;
+    transition: all 300ms ease;
+    cursor: pointer;
+    width: 266px;
+}
+
+.seatxt{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.seatxt h4{
+    color: #FFF;
+font-family: "Roboto Condensed";
+font-size: 29.057px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.seatxt span{
+    color: #FFF;
+font-family: "Roboto Condensed";
+font-size: 24.517px;
+font-style: normal;
+font-weight: 200;
+line-height: normal;
+}
+.seasontab img{
+    transition: all 300ms ease;
+}
+.seasontab:hover img{
+ transform: rotate(90deg);
+}
+.seasontab:hover{
+        scale: 1.1;
+    box-shadow: 0 4px 0 0 #FFF;
+
 }
