@@ -6,7 +6,13 @@ window.addEventListener("click", () => {
 
 
 
+let images = ["img/1.png", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
 
+let heroImg = document.getElementById("heroImage");
+
+let randomImage = images[Math.floor(Math.random() * images.length)];
+
+heroImg.src = randomImage;
 
 let seasons = [
     { season: 1, episodes: 9 },
