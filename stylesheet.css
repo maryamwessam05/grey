@@ -624,3 +624,27 @@ font-style: normal;
 font-weight: 400;
 line-height: 145.549%; /* 18.921px */
 }
+
+.gif6{
+    position: absolute;
+    scale: 1.5;
+    z-index: -99;
+    right: 0;
+    opacity: 0.5;
+    transform: rotate(23deg);
+}
+.gif7{
+        scale: 3;
+    position: absolute;
+    z-index: -9;
+    left: -62px;
+    top: 42%;
+}
+
+.gif8{
+    position: absolute;
+    scale: 2;
+    bottom: 39px;
+    right: 81px;
+    transform: rotate(82deg);
+}

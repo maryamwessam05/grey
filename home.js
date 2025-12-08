@@ -1,3 +1,13 @@
+window.addEventListener("click", () => {
+    const audio = document.getElementById("bg");
+    audio.muted = false;
+    audio.play();
+});
+
+
+
+
+
 let seasons = [
     { season: 1, episodes: 9 },
     { season: 2, episodes: 16 },

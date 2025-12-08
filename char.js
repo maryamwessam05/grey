@@ -1,3 +1,14 @@
+window.addEventListener("click", () => {
+    const audio = document.getElementById("bg");
+    audio.muted = false;
+    audio.play();
+});
+
+
+
+
+
+
 let index = localStorage.getItem("selectedCast");
 let chosenCast = characters[index];
 
