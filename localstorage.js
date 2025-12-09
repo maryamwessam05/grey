@@ -72,3 +72,10 @@ let characters = [
   }
 ];
 
+
+let creds = {
+  username: "student@eui.edu.eg",
+  password: "123456"
+}
+
+localStorage.setItem("login" , JSON.stringify(creds));

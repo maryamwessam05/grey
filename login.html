@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="stylesheet.css">
     </head>
 <body>
-
+    
     <section class="login">
         <video class="video" autoplay src="img/6913708_Motion_Graphics_Motion_Graphic_3840x2160.mp4"></video>
         <div class="logincont">
@@ -25,11 +25,17 @@
                         <label for="Username">Username</label>
                         <input id="username" type="text" placeholder="e.g maryam">
                         <label for="Password">Password</label>
-                        <input id="Password" type="password" placeholder="*******">
+                        <input id="password" type="password" placeholder="*******">
                     </form>
-                    <div class="contactbtn">
+                    
+                        <div id="error" class="error">
+                            Sorry the info you entered is incorrect
+                            <img src="img/clarity_remove-solid.svg" alt="">
+                        </div>
+                    
+                    <button onclick="login()" class="contactbtn" >
                         Login
-                    </div>
+                    </button>
 
                     <h5>Or</h5>
                     <div class="sign">
@@ -42,9 +48,15 @@
                             <span>Continue with Apple</span>
                         </div>
                     </div>
+
+
                 </div>
             
         </div>
     </section>
+
+    <script src="localstorage.js"></script>
+    <script src="login.js"></script>
+
 </body>
 </html>

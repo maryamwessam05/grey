@@ -1,3 +1,13 @@
+// window.addEventListener("load", () => {
+//     setTimeout(() => {
+//       document.getElementById("preloader").style.display = "none";
+//     }, 3000);
+//   });
+
+
+
+
+
 window.addEventListener("click", () => {
     const audio = document.getElementById("bg");
     audio.muted = false;
