@@ -1,3 +1,13 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 3000);
+  });
+
+
+
+
+
 function login() {
     let username = document.getElementById('username').value;
     let password = document.getElementById('password').value;

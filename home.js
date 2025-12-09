@@ -1,8 +1,8 @@
-// window.addEventListener("load", () => {
-//     setTimeout(() => {
-//       document.getElementById("preloader").style.display = "none";
-//     }, 3000);
-//   });
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 3000);
+  });
 
 
 
@@ -205,7 +205,7 @@ let merch = [
         <img class= "merchimg" src="${merch[i].offerimg}" alt="">
         <div class="mercont">
 
-            <div class="row2">
+            <div class="row2merch">
                 <h3>${merch[i].title}</h3>
                 <p>${merch[i].desc}</p>
             </div>

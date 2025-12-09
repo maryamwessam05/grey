@@ -736,7 +736,7 @@ align-self: stretch;
 
 
 
-.row2{
+.row2merch{
     display: flex;
 flex-direction: column;
 align-items: flex-start;
@@ -1142,7 +1142,23 @@ line-height: 110%; /* 26.4px */
 #preloader{
     height: 100vh;
     width: 100%;
-    background-color: #1A1A1A;
+    background-color: black;
     position: relative;
     z-index: 9999999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gifcont{
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.gifcont img{
+    width: 128%;
 }

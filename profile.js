@@ -1,3 +1,15 @@
+window.addEventListener("load", () => {
+    setTimeout(() => {
+      document.getElementById("preloader").style.display = "none";
+    }, 3000);
+  });
+
+
+
+
+
+
+
 let nav = [
     {
         title : "Home",
