@@ -9,7 +9,7 @@ body{
     justify-content: center;
     align-items: center;
     background-color: black;
-    width: 1280px;
+    width: 100%;
     flex-direction: column;
     overflow-x: hidden;
     margin: 0 auto;
@@ -17,7 +17,7 @@ body{
 
 header{
 display: flex;
-width: 1280px;
+width: 100%;
 padding: 30px 27px;
 align-items: center;
 justify-content: space-between;
@@ -96,7 +96,7 @@ text-underline-position: from-font;
 
 .hero{
     display: flex;
-width: 1280px;
+width: 100%;
 padding: 27px 0;
 flex-direction: column;
 align-items: flex-start;
@@ -140,6 +140,7 @@ box-shadow: 0 4px 0 0 #FFF;
 }
 .banner{
     margin-top: -15px;
+    width: 100%;
 }
 
 .about{
@@ -247,6 +248,7 @@ main{
     align-items: center;
     position: relative;
     margin-top: 78px;
+    width: 100%;
 }
 
 .seasonslist{
@@ -394,7 +396,7 @@ flex-wrap: wrap;
 footer{
     font-family: Montserrat;
     display: flex;
-    width: 1280px;
+    width: 100%;
     padding:64px 51px;
     flex-direction: column;
     align-items: center;
@@ -1291,4 +1293,12 @@ line-height: normal;
 
 .emptycart img{
     width: 40px;
+}
+
+.cart{
+    cursor: pointer;
+}
+
+.headline img{
+    cursor: pointer;
 }

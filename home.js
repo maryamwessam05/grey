@@ -14,6 +14,7 @@ window.addEventListener("click", () => {
     audio.play();
 });
 
+
 let nav = [
     {
         title : "Home",
@@ -46,20 +47,6 @@ for ( let i=0 ; i < nav.length; i++){
 
 
 
-
-let cartPage = document.querySelector(".cartpage");
-let cartIcon = document.querySelector("#cart");
-
-cartIcon.addEventListener("click", () => {
-    cartPage.style.display = cartPage.style.display === "flex" ? "none" : "flex";
-});
-
-function closeCart(){
-let cartPage = document.querySelector(".cartpage");
-
-    cartPage.style.display = "none";
-}
-
 let images = ["img/1.png", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
 
 let heroImg = document.getElementById("heroImage");
@@ -90,6 +77,18 @@ let seasons = [
     { season: 19, episodes: 20 },
     { season: 20, episodes: 20 }
 ];
+document.getElementById("abt").innerHTML = "About the show";
+document.querySelector(".knowbtn").innerHTML = "KNOW THE CAST";
+document.getElementById("abtp").innerHTML =
+    "Grey's Anatomy is a medical drama that follows a group of surgeons at Grey Sloan Memorial Hospital. The show focuses on their lives inside and outside the operating room — mixing emotional stories, intense surgeries, and strong friendships. Created by Shonda Rhimes, it’s one of the most iconic TV dramas.";
+document.querySelector(".readbtn").innerHTML = "READ MORE";
+document.getElementById("seas").innerHTML = "Seasons";
+document.getElementById("cas").innerHTML = "Cast";
+document.getElementById("mer").innerHTML = "Merch";
+document.querySelector(".contactbtn").innerHTML = "Login";
+
+
+
 
 
 let seasonslist = document.querySelector(".seasonslist");
@@ -174,15 +173,67 @@ function openCast(index) {
 }
 
 
-let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
-updateCart();
 
 
-function updateCart() {
-    document.getElementById("counter").innerHTML = cartItems.length;
-    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+let cartPage = document.querySelector(".cartpage");
+let cartIcon = document.querySelector("#cart");
+
+function openCart() {
+    const cartPage = document.querySelector(".cartpage");
+    cartPage.style.display = "flex"; // show cart
 }
 
+function closeCart(){
+    cartPage.style.display = "none";
+}
+
+
+let merch = [
+    {
+        offerimg : "img/Post-it Grey’s Anatomy Crewneck Sweatshirt.jpeg",
+        title: "Grey's anatomy sweater",
+        desc:"Warm and cozy sweater for winter and going out",
+        price: "299 EGP"
+    },
+    {
+        offerimg : "img/Doctor Nurse Printed Ladies Cosmetic Bag, Letter Cartoon Character Pattern Toiletry Bag, Portable Pencil Storage Bag, Party Gift Bag.jpeg",
+        title: "Grey's anatomy bag",
+        desc:"An efficient bag to carry your stuff and be easy to carry",
+        price: "599 EGP"
+    },
+    {
+        offerimg : "img/Greys Anatomy, Trust Me I'm a Surgeon, Tote Bag, Shopping Tote Bag, Reusable Tote Bag.jpeg",
+        title: "Grey's anatomy tote",
+        desc:"An efficient and stylish tote to carry your stuff",
+        price: "1,299 EGP"
+    }
+];
+
+
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
+
+for (let i = 0; i < merch.length; i++){
+    document.getElementById("merch").innerHTML += `
+    <div class="merchsingle">
+        <img class="merchimg" src="${merch[i].offerimg}" alt="">
+        <div class="mercont">
+            <div class="row2merch">
+                <h3>${merch[i].title}</h3>
+                <p>${merch[i].desc}</p>
+            </div>
+            <div class="row3">
+                <h4>${merch[i].price}</h4>
+                <div class="pricecounter">
+                    <button class="remove" onclick="decrease('number${i}', ${i})"><img src="img/-.svg" alt=""></button>
+                    <span id="number${i}">0</span>
+                    <button class="add" onclick="increase('number${i}', ${i})"><img src="img/+.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>`;
+}
 
 
 function increase(numid, merchIndex) {
@@ -190,9 +241,7 @@ function increase(numid, merchIndex) {
     num++;
     document.getElementById(numid).innerHTML = num;
 
-    // Check if item is already in cart
     let item = cartItems.find(x => x.id === merchIndex);
-
     if (!item) {
         cartItems.push({ id: merchIndex, quantity: 1 });
     } else {
@@ -203,73 +252,85 @@ function increase(numid, merchIndex) {
     renderCartPage();
 }
 
-
-
-
-function decrease(numid, merchIndex){
+function decrease(numid, merchIndex) {
     let num = Number(document.getElementById(numid).innerHTML);
 
     if (num > 0) {
         num--;
         document.getElementById(numid).innerHTML = num;
 
-        if (num === 0) {
-            cartItems = cartItems.filter(id => id !== merchIndex);
-            updateCart();
+        let item = cartItems.find(x => x.id === merchIndex);
+
+        if (item) {
+            if (num === 0) {
+                cartItems = cartItems.filter(x => x.id !== merchIndex);
+            } else {
+                item.quantity = num;
+            }
         }
+
+        updateCart();
+        renderCartPage();
     }
 }
 
+function updateCart() {
+    document.getElementById("counter").innerHTML = cartItems.length;
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
 
+function renderCartPage() {
+    const cartPage = document.querySelector(".cartpage");
 
-
-
-
-let merch = [
-    {
-        offerimg : "img/Post-it Grey’s Anatomy Crewneck Sweatshirt.jpeg",
-        title: "Grey's anatomy sweater",
-        desc:"Warm and cozy sweater for winter and going out",
-        price: "299 EGP"
-    },
-      {
-        offerimg : "img/Doctor Nurse Printed Ladies Cosmetic Bag, Letter Cartoon Character Pattern Toiletry Bag, Portable Pencil Storage Bag, Party Gift Bag.jpeg",
-        title: "Grey's anatomy bag",
-        desc:"An efficient bag to carry your stuff and be easy to carry",
-        price: "599 EGP"
-    },
-      {
-        offerimg : "img/Greys Anatomy, Trust Me I'm a Surgeon, Tote Bag, Shopping Tote Bag, Reusable Tote Bag.jpeg",
-        title: "Grey's anatomy tote",
-        desc:"An efficient and stylish tote to carry your stuff",
-        price: "1,299 EGP"
-    }
-   ]
-
-   for ( i = 0; i < merch.length; i++){
-    document.getElementById("merch").innerHTML +=
-    `
-    <div class="merchsingle">
-        <img class= "merchimg" src="${merch[i].offerimg}" alt="">
-        <div class="mercont">
-
-            <div class="row2merch">
-                <h3>${merch[i].title}</h3>
-                <p>${merch[i].desc}</p>
-            </div>
-
-            <div class="row3">
-                <h4>${merch[i].price}</h4>
-                <div class="pricecounter">
-                    <button class="remove" onclick="decrease('number${i}', ${i})"><img src="img/-.svg" alt=""></button>
-                    <span id="number${i}">0</span>
-                    <button class="add" onclick="increase('number${i}', ${i})"><img src="img/+.svg" alt=""></button>
-                </div>
-            </div>
+    let html = `
+        <div class="headline">
+            <h1>Your cart</h1>
+            <img onclick="closeCart()" src="img/clarity_remove-solid.svg" alt="">
         </div>
-    </div>
+    `;
 
-    `};
+    if (cartItems.length === 0) {
+        html += `
+            <div class="emptycart">
+                <img src="img/cartg.svg" alt="">
+                <h5>Your cart is empty</h5>
+            </div>
+        `;
+    } else {
+        cartItems.forEach(item => {
+            const m = merch[item.id];
+            html += `
+                <div class="orderdet">
+                    <div class="half1cart">
+                        <div class="orderimg">
+                            <img src="${m.offerimg}" alt="">
+                        </div>
+                        <div class="cartinfo">
+                            <h4>${m.title}</h4>
+                            <span>Quantity : ${item.quantity}</span>
+                        </div>
+                    </div>
+                    <h5>${m.price}</h5>
+                    <img class="delete" onclick="deleteItem(${item.id})" src="img/mingcute_delete-fill.svg" alt="">
+                </div>
+            `;
+        });
+    }
+
+    cartPage.innerHTML = html;
+}
+
+function deleteItem(id) {
+    cartItems = cartItems.filter(x => x.id !== id);
+    document.getElementById("number" + id).innerHTML = 0;
+
+    updateCart();
+    renderCartPage();
+}
+
+updateCart();
+renderCartPage();
+
 document.getElementById("footer").innerHTML +=
 `
  <div class="footcontent">

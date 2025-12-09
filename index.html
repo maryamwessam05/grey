@@ -28,7 +28,7 @@
             </ul>
         </nav>
         <div class="concart">
-            <div id="cart" class="cart">
+            <div id="cart" class="cart" onclick="openCart()">
                 <div class="iconcart">
                     <div id="counter" class="counter">0</div>
                     <img src="img/mynaui_cart-solid.svg" alt="">
@@ -37,36 +37,11 @@
             </div>
             <a href="login.html">
                 <div class="contactbtn">
-                    Login
+                    
                 </div>
             </a>
 
             <div class="cartpage">
-                <div class="headline">
-                    <h1>Your cart</h1>
-                    <img onclick="closeCart()" src="img/clarity_remove-solid.svg" alt="">
-
-                </div>
-                <div class="orderdet">
-                    <div class="half1cart">
-
-                        <div class="orderimg">
-    
-                            <img src="img/Doctor Nurse Printed Ladies Cosmetic Bag, Letter Cartoon Character Pattern Toiletry Bag, Portable Pencil Storage Bag, Party Gift Bag.jpeg" alt="">
-                        </div>
-                        <div class="cartinfo">
-                            <h4>Handbag</h4>
-                            <span>Quantity : 1</span>
-                        </div>
-                    </div>
-                    <h5>299EGP</h5>
-                    <img  class="delete" src="img/mingcute_delete-fill.svg" alt="">
-                </div>
-                <div class="emptycart">
-                    <img src="img/cartg.svg" alt="">
-                    <h5>Your cart is empty</h5>
-                </div>
-                </div>
 
         </div>
     </header>
@@ -86,7 +61,7 @@
                 <img src="img/Group 1.png" id="heroImage" alt="">
                 <a href="#cast">
 
-                    <div class="knowbtn">KNOW THE CAST</div>
+                    <div class="knowbtn"></div>
                 </a>
             </div>
             <img class="banner" src="img/banner.png" alt="">
@@ -95,14 +70,14 @@
         <section id="about" class="about">
             <div class="sectitle">
                 <div class="line"></div>
-                <h1>About the show</h1>
+                <h1 id="abt"></h1>
                 <div class="line"></div>
             </div>
 
             <div  class="aboutcont">
                 <div class="abtxt">
-                    <p>Grey’s Anatomy is a medical drama that follows a group of surgeons at Grey Sloan Memorial Hospital. The show focuses on their lives inside and outside the operating room — mixing emotional stories, intense surgeries, and strong friendships. Created by Shonda Rhimes, it’s one of the most iconic TV dramas.</p>
-                    <div class="readbtn">READ MORE</div>
+                    <p id="abtp"></p>
+                    <div class="readbtn"></div>
                 </div>
                 <img src="img/Group 2.png" alt="">
             </div>
@@ -111,7 +86,7 @@
         <section id="seasons" class="seasons">
             <div class="sectitle">
                 <div class="line"></div>
-                <h1>Seasons</h1>
+                <h1 id="seas"></h1>
                 <div class="line"></div>
             </div>
 
@@ -123,7 +98,7 @@
         <section id="cast" class="cast">
             <div class="sectitle">
                 <div class="line"></div>
-                <h1>Cast</h1>
+                <h1 id="cas">Cast</h1>
                 <div class="line"></div>
             </div>
 
@@ -137,7 +112,7 @@
         <section id="merchsec">
             <div class="sectitle">
                 <div class="line"></div>
-                <h1>Merch</h1>
+                <h1 id="mer"></h1>
                 <div class="line"></div>
             </div>
             <div id="merch" class="merch"></div>
