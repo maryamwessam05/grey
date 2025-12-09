@@ -683,3 +683,115 @@ html{
 ::-webkit-scrollbar-thumb:hover {
   background: #53AABB;
 }
+
+#merchsec{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 0;
+}
+.merch{
+    display: flex;
+align-items: center;
+gap: 55px;
+align-self: stretch;
+justify-content: center;
+}
+
+.merchsingle{
+    display: flex;
+width: 332.043px;
+overflow: hidden;
+flex-direction: column;
+align-items: flex-start;
+border-radius: 13.462px;
+background:  #FFF;
+box-shadow: 0 6.731px 8.413px 0 rgba(0, 0, 0, 0.10), 0 16.827px 21.034px 0 rgba(0, 0, 0, 0.10);
+}
+
+.mercont{
+    display: flex;
+padding: 20px;
+flex-direction: column;
+align-items: flex-start;
+gap: 20px;
+align-self: stretch;
+}
+
+.row3{
+    display: flex;
+justify-content: space-between;
+align-items: center;
+align-self: stretch;
+}
+
+
+
+.row2{
+    display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 7px;
+align-self: stretch;
+}
+
+.row2 h3{
+    color: #374151;
+font-family: Montserrat;
+font-size: 16.827px;
+font-style: normal;
+font-weight: 700;
+line-height: 23.558px; /* 140% */
+}
+
+.row2 p{
+    color: #374151;
+    font-family: Montserrat;
+font-size: 13.462px;
+font-style: normal;
+font-weight: 400;
+line-height: 20.192px; /* 150% */
+}
+
+.row3 h4{
+color: #53AABB;
+font-family: Montserrat;
+font-size: 20.192px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+}
+
+.pricecounter{
+    display: flex;
+align-items: center;
+gap: 19px;
+
+}
+
+.pricecounter button{
+    display: flex;
+width: 38.245px;
+height: 38.245px;
+padding: 8px;
+justify-content: center;
+align-items: center;
+gap: 12.5px;
+aspect-ratio: 38.25/38.25;
+border-radius:50px;
+background: #374151;
+ outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.pricecounter span{
+color:  #374151;
+font-family: Montserrat;
+font-size: 20.192px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+width: 20px;
+text-align: center;
+}

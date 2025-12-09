@@ -4,6 +4,12 @@ window.addEventListener("click", () => {
     audio.play();
 });
 
+let nav = [
+    "Home",
+    "About",
+    "Cast",
+    "Watch"
+]
 
 
 let images = ["img/1.png", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
@@ -119,6 +125,66 @@ function openCast(index) {
     window.location.href = "char.html";
 }
 
+
+function increase(numid){
+    let num = document.getElementById(numid).innerHTML;
+    document.getElementById(numid).innerHTML = ++num;
+   };
+
+
+   function decrease(numid){
+    let num = document.getElementById(numid).innerHTML;
+    document.getElementById(numid).innerHTML = --num;
+   };
+
+
+
+
+let merch = [
+    {
+        offerimg : "img/img.png",
+        title: "Food Delivery Feast",
+        desc:"Get 70% off your first order from top restaurants in Cairo",
+        price: "299 EGP"
+    },
+      {
+        offerimg : "img/img-1.png",
+        title: "Fashion Week Sale",
+        desc:"Trendy clothes and accessories for the modern Egyptian",
+        price: "599 EGP"
+    },
+      {
+        offerimg : "img/img-2.png",
+        title: "Weekend Getaway",
+        desc:"Explore Egypt's hidden gems with exclusive travel deals",
+        price: "1,299 EGP"
+    }
+   ]
+
+   for ( i = 0; i < merch.length; i++){
+    document.getElementById("merch").innerHTML +=
+    `
+    <div class="merchsingle">
+        <img src="${merch[i].offerimg}" alt="">
+        <div class="mercont">
+
+            <div class="row2">
+                <h3>${merch[i].title}</h3>
+                <p>${merch[i].desc}</p>
+            </div>
+
+            <div class="row3">
+                <h4>${merch[i].price}</h4>
+                <div class="pricecounter">
+                    <button class="remove" onclick="decrease('number${i}')"><img src="img/-.svg" alt=""></button>
+                    <span id="number${i}">0</span>
+                    <button class="add" onclick="increase('number${i}')"><img src="img/+.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    `};
 document.getElementById("footer").innerHTML +=
 `
  <div class="footcontent">
