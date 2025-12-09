@@ -20,7 +20,7 @@ display: flex;
 width: 1280px;
 padding: 30px 27px;
 align-items: center;
-gap: 299px;
+justify-content: space-between;
 background-color: #1A1A1A;
 position: fixed;
     top: 0;
@@ -802,4 +802,37 @@ font-weight: 600;
 line-height: normal;
 width: 20px;
 text-align: center;
+}
+
+
+.concart{
+    display: flex;
+align-items: center;
+gap: 47px;
+}
+
+.cart{
+    position: relative;
+}
+
+.counter{
+    display: flex;
+width: 18px;
+height: 18px;
+padding: 2px 1px;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 10px;
+border-radius: 9px;
+color: #FFF;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+background: #53AABB;
+position: absolute;
+top: 0;
+right: 0;
 }
