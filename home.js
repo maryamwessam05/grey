@@ -45,6 +45,21 @@ for ( let i=0 ; i < nav.length; i++){
 }
 
 
+
+
+let cartPage = document.querySelector(".cartpage");
+let cartIcon = document.querySelector("#cart");
+
+cartIcon.addEventListener("click", () => {
+    cartPage.style.display = cartPage.style.display === "flex" ? "none" : "flex";
+});
+
+function closeCart(){
+let cartPage = document.querySelector(".cartpage");
+
+    cartPage.style.display = "none";
+}
+
 let images = ["img/1.png", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
 
 let heroImg = document.getElementById("heroImage");
@@ -159,23 +174,51 @@ function openCast(index) {
 }
 
 
-function increase(numid){
-    let num = document.getElementById(numid).innerHTML;
-    document.getElementById(numid).innerHTML = ++num;
-
-    let counter = document.getElementById("counter")
-
-   };
+let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+updateCart();
 
 
-   function decrease(numid){
-    let num = document.getElementById(numid).innerHTML;
-    if(num != 0){
+function updateCart() {
+    document.getElementById("counter").innerHTML = cartItems.length;
+    localStorage.setItem("cartItems", JSON.stringify(cartItems));
+}
 
-        document.getElementById(numid).innerHTML = --num;
+
+
+function increase(numid, merchIndex) {
+    let num = Number(document.getElementById(numid).innerHTML);
+    num++;
+    document.getElementById(numid).innerHTML = num;
+
+    // Check if item is already in cart
+    let item = cartItems.find(x => x.id === merchIndex);
+
+    if (!item) {
+        cartItems.push({ id: merchIndex, quantity: 1 });
+    } else {
+        item.quantity = num;
     }
 
-   };
+    updateCart();
+    renderCartPage();
+}
+
+
+
+
+function decrease(numid, merchIndex){
+    let num = Number(document.getElementById(numid).innerHTML);
+
+    if (num > 0) {
+        num--;
+        document.getElementById(numid).innerHTML = num;
+
+        if (num === 0) {
+            cartItems = cartItems.filter(id => id !== merchIndex);
+            updateCart();
+        }
+    }
+}
 
 
 
@@ -218,9 +261,9 @@ let merch = [
             <div class="row3">
                 <h4>${merch[i].price}</h4>
                 <div class="pricecounter">
-                    <button class="remove" onclick="decrease('number${i}')"><img src="img/-.svg" alt=""></button>
+                    <button class="remove" onclick="decrease('number${i}', ${i})"><img src="img/-.svg" alt=""></button>
                     <span id="number${i}">0</span>
-                    <button class="add" onclick="increase('number${i}')"><img src="img/+.svg" alt=""></button>
+                    <button class="add" onclick="increase('number${i}', ${i})"><img src="img/+.svg" alt=""></button>
                 </div>
             </div>
         </div>

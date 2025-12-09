@@ -810,6 +810,7 @@ text-align: center;
     display: flex;
 align-items: center;
 gap: 47px;
+position: relative;
 }
 
 .cart{
@@ -1161,4 +1162,133 @@ line-height: 110%; /* 26.4px */
 
 .gifcont img{
     width: 128%;
+}
+
+.cartpage{
+    border-radius: 7px;
+background: #FFF;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+    display: flex;
+width: 340px;
+padding: 23px 11px;
+flex-direction: column;
+align-items: center;
+gap: 16px;
+ position: absolute;
+    top: 60px;     
+    right: 0;      
+
+    display: none;  
+    z-index: 9999999;
+}
+
+.orderdet{
+    display: flex;
+padding: 18px 0;
+position: relative;
+align-items: center;
+width: 100%;
+justify-content: space-between;
+border-bottom: 1px solid #B8B8B8;
+}
+
+.orderimg{
+    width: 111px;
+    height: 76px;
+    display: flex;
+    overflow: hidden;
+    border-radius: 9px;
+    border: 1px solid #ACACAC;
+    align-items: center;
+    justify-content: center;
+}
+
+.orderimg img{
+    object-fit: cover;
+    width: 100%;
+}
+
+.cartinfo{
+    display: flex;
+width: fit-content;
+flex-direction: column;
+align-items: flex-start;
+gap: 5px;
+}
+
+.cartinfo h4{
+    color: #000;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.cartinfo span{
+    color: #888;
+font-family: Montserrat;
+font-size: 13px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.orderdet h5{
+    color: #000;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.delete{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.half1cart{
+    display: flex;
+    align-items: center;
+    gap: 14px;    
+}
+.cartpage h1{
+    color: #333333;
+font-family: Montserrat;
+font-size: 18px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.headline{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.headline img{
+    width: 27px;
+    filter: grayscale(100%);
+}
+
+.emptycart{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+        color: #53AABB;
+font-family: Montserrat;
+font-size: 15px;
+font-style: normal;
+font-weight: 600;
+align-items: center;
+justify-content: center
+line-height: normal;
+}
+
+.emptycart img{
+    width: 40px;
 }
