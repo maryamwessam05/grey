@@ -5,11 +5,34 @@ window.addEventListener("click", () => {
 });
 
 let nav = [
-    "Home",
-    "About",
-    "Cast",
-    "Watch"
+    {
+        title : "Home",
+        link: "index.html"
+    },
+    {
+        title : "About",
+        link: "#about"
+    },
+    {
+        title : "Cast",
+        link: "#cast"
+    },
+    {
+        title : "Merch",
+        link: "#merchsec"
+    },
 ]
+
+let navbar = document.getElementById("navbar");
+
+for ( let i=0 ; i < nav.length; i++){
+
+    navbar.innerHTML += `
+                <li>
+                    <a href="${nav[i].link}">${nav[i].title}</a>
+                </li>
+    `
+}
 
 
 let images = ["img/1.png", "img/2.jpg", "img/3.jpg", "img/4.jpg"];
