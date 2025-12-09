@@ -162,6 +162,9 @@ function openCast(index) {
 function increase(numid){
     let num = document.getElementById(numid).innerHTML;
     document.getElementById(numid).innerHTML = ++num;
+
+    let counter = document.getElementById("counter")
+
    };
 
 
@@ -173,6 +176,8 @@ function increase(numid){
     }
 
    };
+
+
 
 
 

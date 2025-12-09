@@ -82,3 +82,6 @@ localStorage.setItem("login" , JSON.stringify(creds));
 
 
 
+let cart = document.getElementById("counter");
+
+localStorage.setItem("cart", cart);
