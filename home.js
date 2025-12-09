@@ -134,7 +134,11 @@ function increase(numid){
 
    function decrease(numid){
     let num = document.getElementById(numid).innerHTML;
-    document.getElementById(numid).innerHTML = --num;
+    if(num != 0){
+
+        document.getElementById(numid).innerHTML = --num;
+    }
+
    };
 
 
@@ -142,21 +146,21 @@ function increase(numid){
 
 let merch = [
     {
-        offerimg : "img/img.png",
-        title: "Food Delivery Feast",
-        desc:"Get 70% off your first order from top restaurants in Cairo",
+        offerimg : "img/Post-it Grey’s Anatomy Crewneck Sweatshirt.jpeg",
+        title: "Grey's anatomy sweater",
+        desc:"Warm and cozy sweater for winter and going out",
         price: "299 EGP"
     },
       {
-        offerimg : "img/img-1.png",
-        title: "Fashion Week Sale",
-        desc:"Trendy clothes and accessories for the modern Egyptian",
+        offerimg : "img/Doctor Nurse Printed Ladies Cosmetic Bag, Letter Cartoon Character Pattern Toiletry Bag, Portable Pencil Storage Bag, Party Gift Bag.jpeg",
+        title: "Grey's anatomy bag",
+        desc:"An efficient bag to carry your stuff and be easy to carry",
         price: "599 EGP"
     },
       {
-        offerimg : "img/img-2.png",
-        title: "Weekend Getaway",
-        desc:"Explore Egypt's hidden gems with exclusive travel deals",
+        offerimg : "img/Greys Anatomy, Trust Me I'm a Surgeon, Tote Bag, Shopping Tote Bag, Reusable Tote Bag.jpeg",
+        title: "Grey's anatomy tote",
+        desc:"An efficient and stylish tote to carry your stuff",
         price: "1,299 EGP"
     }
    ]
@@ -165,7 +169,7 @@ let merch = [
     document.getElementById("merch").innerHTML +=
     `
     <div class="merchsingle">
-        <img src="${merch[i].offerimg}" alt="">
+        <img class= "merchimg" src="${merch[i].offerimg}" alt="">
         <div class="mercont">
 
             <div class="row2">

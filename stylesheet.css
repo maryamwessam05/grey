@@ -21,6 +21,10 @@ width: 1280px;
 padding: 30px 27px;
 align-items: center;
 gap: 299px;
+background-color: #1A1A1A;
+position: fixed;
+    top: 0;
+    z-index: 999999;
 
 }
 
@@ -241,6 +245,7 @@ main{
     flex-direction: column;
     align-items: center;
     position: relative;
+    margin-top: 78px;
 }
 
 .seasonslist{
@@ -689,6 +694,7 @@ html{
     display: flex;
     flex-direction: column;
     padding: 50px 0;
+    gap: 50px;
 }
 .merch{
     display: flex;
@@ -717,7 +723,9 @@ align-items: flex-start;
 gap: 20px;
 align-self: stretch;
 }
-
+.merchimg{
+    width: 100%;
+}
 .row3{
     display: flex;
 justify-content: space-between;
