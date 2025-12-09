@@ -113,7 +113,9 @@ for (let i = 0; i < cast.length; i++) {
 
 
 function openCast(index) {
-    localStorage.setItem("selectedCast", index);
+
+    localStorage.setItem("selectedCast", JSON.stringify(characters[index]));
+
     window.location.href = "char.html";
 }
 

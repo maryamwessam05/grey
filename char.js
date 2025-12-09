@@ -8,9 +8,7 @@ window.addEventListener("click", () => {
 
 
 
-
-let index = localStorage.getItem("selectedCast");
-let chosenCast = characters[index];
+let chosenCast = JSON.parse(localStorage.getItem("selectedCast"));
 
 
 document.getElementById("character").innerHTML = `
