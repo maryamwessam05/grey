@@ -964,3 +964,56 @@ font-style: normal;
 font-weight: 300;
 line-height: normal;
 }
+
+.profilesec{
+    width: 100%;
+    position: relative;
+    padding-top: 141px;
+    width: 1280px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 77px;
+
+}
+
+.pfp{
+    width: 150px;
+height: 150px;
+background-image: url(img/Ellipse\ 15.png);
+position: relative;
+}
+
+.pfp img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+
+.pfpcont{
+    display: flex;
+width: 292px;
+flex-direction: column;
+align-items: center;
+gap: 53px;
+}
+.pfpcont h6{
+    color: #FFF;
+font-family: Montserrat;
+font-size: 24px;
+font-style: normal;
+font-weight: 300;
+line-height: 110%; /* 26.4px */
+}
+
+.pfpcont span{
+    color: #FFF;
+    font-family: Montserrat;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%;
+}
+
